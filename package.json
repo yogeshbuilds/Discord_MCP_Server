@@ -1,0 +1,25 @@
+{
+  "name": "discord-mcp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "server:build": "tsc",
+    "server:build:watch": "tsc --watch",
+    "server:dev": "tsx index.ts",
+    "server:inspect": "set DANGEROUSLY_OMIT_AUTH=true && npx @modelcontextprotocol/inspector npm run server:dev"
+  },
+  "keywords": [],
+  "author": "Yogesh Chaudhary",
+  "license": "ISC",
+  "description": "A MCP server for Discord",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.17.1",
+    "dotenv": "^17.2.1",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/inspector": "^0.16.2",
+    "tsx": "^4.20.3",
+    "typescript": "^5.9.2"
+  }
+}
