@@ -1,6 +1,6 @@
 # Discord MCP Server
 
-A Model Context Protocol (MCP) server that allows you to send messages to Discord channels directly from Cursor.
+A MCP server that allows you to send messages to Discord channels directly from Cursor.
 
 ## Features
 
