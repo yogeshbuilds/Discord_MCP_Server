@@ -6,10 +6,10 @@ import { config } from "dotenv";
 // Load environment variables
 config();
 
-const DISCORD_WEBHOOK_URL = process.env['DISCORD_WEBHOOK_URL'] || "https://discord.com/api/webhooks/1401438953587998800/uJebDYj9dIyY8snVVdF7jU6P_L_0g-4K_TrrE73QeGNpzDXM7wdTuWyRBMFuI3z7FBZ-";
+const DISCORD_WEBHOOK_URL = process.env['DISCORD_WEBHOOK_URL']
 
 const server = new McpServer({
-    name: 'discord-msp',
+    name: 'discord-mcp',
     version: '1.0.0',
     title: 'Discord MCP Server',
     capabilities: {
@@ -29,7 +29,7 @@ server.tool('send-message', "an information message to the channel about the rec
     idempotentHint: false,
     openWorldHint: true
 }, async ({ message }: { message: string }) => {
-    const response = await fetch(DISCORD_WEBHOOK_URL, {
+    const response = await fetch(DISCORD_WEBHOOK_URL!, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
